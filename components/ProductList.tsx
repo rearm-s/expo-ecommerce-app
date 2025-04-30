@@ -23,13 +23,13 @@ const ProductList = ({ products, flatList = true }: Props) => {
           columnWrapperStyle={{ justifyContent: "space-between", marginBottom: 20, }}
           keyExtractor={(item) => item.id.toString()}
           renderItem={({ index, item }) => (
-            <ProductItem item={item} index={index} />
+            <ProductItem item={item} index={index} productType="regular" />
           )} />
       ) : (
         <View style={styles.itemsWrapper}>
           {products.map((item, index) => (
             <View key={index} style={styles.productWrapper}>
-              <ProductItem item={item} index={index} />
+              <ProductItem item={item} index={index} productType="regular" />
             </View>
           ))}
         </View>

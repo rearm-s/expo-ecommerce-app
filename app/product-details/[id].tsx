@@ -11,13 +11,13 @@ import { useHeaderHeight } from "@react-navigation/elements";
 type Props = {};
 
 const ProductDetails = (props: Props) => {
-  const { id } = useLocalSearchParams();
+  const { id, productType } = useLocalSearchParams();
 
   const [product, setProduct] = React.useState<ProductType>();
 
 
   const getProductDetails = async () => {
-    const URL = `http://10.0.2.2:8000/saleProducts/${id}`;
+    const URL = `http://10.0.2.2:8000/${productType === "sale" ? "saleProducts" : "products"}/${id}`;
     const response = await axios(URL);
 
     setProduct(response.data)
