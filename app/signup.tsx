@@ -23,7 +23,7 @@ const SignUpScreen = (props: Props) => {
       <View style={styles.container}>
         <Text style={styles.title}>Create an account</Text>
         <InputField placeholder="Email Address" placeholderTextColor={Colors.gray} autoCapitalize="none"
-                    keyboardType="email-address" />
+          keyboardType="email-address" />
         <InputField placeholder="Password" placeholderTextColor={Colors.gray} secureTextEntry={true} />
         <InputField placeholder="Confirm Password" placeholderTextColor={Colors.gray} secureTextEntry={true} />
 

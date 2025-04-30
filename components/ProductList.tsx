@@ -20,11 +20,11 @@ const ProductList = ({ products, flatList = true }: Props) => {
       </View>
       {flatList ? (
         <FlatList data={products} numColumns={2}
-                  columnWrapperStyle={{ justifyContent: "space-between", marginBottom: 20, }}
-                  keyExtractor={(item) => item.id.toString()}
-                  renderItem={({ index, item }) => (
-                    <ProductItem item={item} index={index} />
-                  )} />
+          columnWrapperStyle={{ justifyContent: "space-between", marginBottom: 20, }}
+          keyExtractor={(item) => item.id.toString()}
+          renderItem={({ index, item }) => (
+            <ProductItem item={item} index={index} />
+          )} />
       ) : (
         <View style={styles.itemsWrapper}>
           {products.map((item, index) => (

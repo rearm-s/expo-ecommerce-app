@@ -61,23 +61,32 @@ const FlashSale = ({ products }: Props) => {
         <View style={styles.timerWrapper}>
           <Text style={styles.title}>FlashSale</Text>
           <View style={styles.timer}>
-            <Ionicons name="timer-outline" size={16} color={Colors.black} />
+            <Ionicons name="timer-outline"
+              size={16}
+              color={Colors.black} />
             <Text
-              style={styles.timerTxt}>{`${formatTime(timeUnits.days)}:${formatTime(timeUnits.hours)}:${formatTime(timeUnits.minutes)}:${formatTime(timeUnits.seconds)}`}</Text>
+              style={styles.timerTxt}>{`${formatTime(timeUnits.days)}:${formatTime(timeUnits.hours)}:${formatTime(
+              timeUnits.minutes)}:${formatTime(timeUnits.seconds)}`}</Text>
           </View>
         </View>
         <TouchableOpacity>
           <Text style={styles.titleBtn}>See all</Text>
         </TouchableOpacity>
       </View>
-      <FlatList data={products} horizontal showsHorizontalScrollIndicator={false}
-                keyExtractor={(item) => item.id.toString()}
-                contentContainerStyle={{ marginLeft: 20, paddingRight: 20 }}
-                renderItem={({ index, item }) => (
-                  <View style={{ marginRight: 20 }}>
-                    <ProductItem index={index} item={item} />
-                  </View>
-                )}
+      <FlatList
+        data={products}
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        keyExtractor={(item) => item.id.toString()}
+        contentContainerStyle={{
+          marginLeft: 20,
+          paddingRight: 20
+        }}
+        renderItem={({ index, item }) => (
+          <View style={{ marginRight: 20 }}>
+            <ProductItem index={index} item={item} />
+          </View>
+        )}
       />
     </View>
   );

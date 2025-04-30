@@ -5,7 +5,7 @@ import { Colors } from "@/constants/Colors";
 import Animated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
 import { useEffect, useState } from "react";
 
-export function TabBar ({ state, descriptors, navigation }: BottomTabBarProps) {
+export function TabBar({ state, descriptors, navigation }: BottomTabBarProps) {
   const [dimensions, setDimensions] = useState({ width: 100, height: 20 });
 
   const buttonWidth = dimensions.width / state.routes.length;
@@ -74,8 +74,8 @@ export function TabBar ({ state, descriptors, navigation }: BottomTabBarProps) {
 
         return (
           <TabBarButton key={route.name} onPress={onPress} onLongPress={onLongPress} isFocused={isFocused}
-                        routeName={route.name}
-                        label={label} />
+            routeName={route.name}
+            label={label} />
         );
       })}
     </View>

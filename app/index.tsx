@@ -15,15 +15,13 @@ const WelcomeScreen = (props: Props) => {
       <ImageBackground source={require('@/assets/images/ecommerce-splash.jpg')} style={{ flex: 1 }} resizeMode="cover">
         <View style={styles.container}>
           <LinearGradient colors={["transparent", "rgba(255, 255, 255, 0.9)", "rgba(255, 255, 255, 1)"]}
-                          style={styles.background}>
+            style={styles.background}>
             <View style={styles.wrapper}>
               <Animated.Text style={styles.title}
-                             entering={FadeInRight.delay(300).duration(300).springify()}>ShopX</Animated.Text>
+                entering={FadeInRight.delay(300).duration(300).springify()}>ShopX</Animated.Text>
               <Animated.Text style={styles.description} entering={FadeInRight.delay(500).duration(300).springify()}>One
                 Stop Solution for All you Needs.</Animated.Text>
-
               <SocialLoginButtons emailHref={'/signup'} />
-
               <Text style={styles.loginTxt}>
                 Already have an account? {" "}
                 <Link href={"/signin"} asChild>

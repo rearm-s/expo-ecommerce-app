@@ -16,16 +16,19 @@ const Categories = ({ categories }: Props) => {
           <Text style={styles.titleBtn}>See all</Text>
         </TouchableOpacity>
       </View>
-      <FlatList data={categories} horizontal showsHorizontalScrollIndicator={false}
-                keyExtractor={(item) => item.id.toString()}
-                renderItem={({ index, item }) => (
-                  <TouchableOpacity>
-                    <View style={styles.item}>
-                      <Image source={{ uri: item.image }} style={styles.itemImg} />
-                      <Text>{item.name}</Text>
-                    </View>
-                  </TouchableOpacity>
-                )}
+      <FlatList
+        data={categories}
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        keyExtractor={(item) => item.id.toString()}
+        renderItem={({ index, item }) => (
+          <TouchableOpacity>
+            <View style={styles.item}>
+              <Image source={{ uri: item.image }} style={styles.itemImg} />
+              <Text>{item.name}</Text>
+            </View>
+          </TouchableOpacity>
+        )}
       />
     </View>
   );

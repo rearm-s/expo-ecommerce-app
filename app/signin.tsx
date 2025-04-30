@@ -21,7 +21,7 @@ const SignInScreen = (props: Props) => {
       <View style={styles.container}>
         <Text style={styles.title}>Login to Your Account</Text>
         <InputField placeholder="Email Address" placeholderTextColor={Colors.gray} autoCapitalize="none"
-                    keyboardType="email-address" />
+          keyboardType="email-address" />
         <InputField placeholder="Password" placeholderTextColor={Colors.gray} secureTextEntry={true} />
 
         <TouchableOpacity style={styles.btn} onPress={() => {
