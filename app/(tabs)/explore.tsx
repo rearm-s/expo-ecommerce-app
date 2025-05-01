@@ -1,13 +1,44 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { FlatList, Image, StyleSheet, Text, View } from 'react-native'
+import React, { useEffect, useState } from 'react'
+import axios from "axios";
+import { CategoryType } from "@/types/type";
+import { Stack } from 'expo-router';
+import { useHeaderHeight } from "@react-navigation/elements";
+import { Colors } from "@/constants/Colors";
 
 type Props = {}
 
 const ExploreScreen = (props: Props) => {
+
+  const [categories, setCategories] = useState<CategoryType[]>([]);
+  const headerHeight = useHeaderHeight();
+
+  useEffect(() => {
+    getCategories();
+  }, [])
+
+  const getCategories = async () => {
+    const URL = `http://10.0.2.2:8000/categories`;
+    const response = await axios.get(URL);
+
+    setCategories(response.data);
+  }
+
   return (
-    <View style={styles.container}>
-      <Text>Explore Screen</Text>
-    </View>
+    <>
+      <Stack.Screen options={{ headerShown: true, headerTransparent: true }} />
+      <View style={[styles.container, { marginTop: headerHeight }]}>
+        <FlatList data={categories}
+          keyExtractor={(item) => item.id.toString()}
+          showsVerticalScrollIndicator={false}
+          renderItem={({ item, index }) => (
+            <View style={styles.itemWrapper}>
+              <Text style={styles.itemTitle}>{item.name}</Text>
+              <Image source={{ uri: item.image }} style={{ width: 100, height: 100, borderRadius: 10 }} />
+            </View>
+          )} />
+      </View>
+    </>
   )
 }
 
@@ -16,7 +47,20 @@ export default ExploreScreen
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
+    paddingHorizontal: 20,
+  },
+  itemWrapper: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    backgroundColor: Colors.extraLightGray,
+    padding: 10,
+    borderRadius: 10,
+    marginBottom: 20,
+  },
+  itemTitle: {
+    fontSize: 16,
+    fontWeight: '500',
+    color: Colors.black,
   }
 })
