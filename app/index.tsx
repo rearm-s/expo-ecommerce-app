@@ -18,7 +18,7 @@ const WelcomeScreen = (props: Props) => {
             style={styles.background}>
             <View style={styles.wrapper}>
               <Animated.Text style={styles.title}
-                entering={FadeInRight.delay(300).duration(300).springify()}>ShopX</Animated.Text>
+                entering={FadeInRight.delay(300).duration(300).springify()}>McDnld</Animated.Text>
               <Animated.Text style={styles.description} entering={FadeInRight.delay(500).duration(300).springify()}>One
                 Stop Solution for All you Needs.</Animated.Text>
               <SocialLoginButtons emailHref={'/signup'} />
