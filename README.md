@@ -10,6 +10,7 @@ This is a starter template for the expo eCommerce app tutorial on my YouTube cha
    npm install
    ```
 
+
 2. Start the app
 
    ```bash
@@ -29,18 +30,18 @@ my machine using `npm install -g json-server` command. To start up the JSON Serv
 `json-server --watch data/db.json --port 8000`. If you don't use `--port` flag then it'll run
 on "https://localhost:3000" by default.
 
-![img.png](img.png)
+![img.png](assets/images/readme/img.png)
 
-![img_1.png](img_1.png)
+![img_1.png](assets/images/readme/img_1.png)
 
-![img_2.png](img_2.png)
+![img_2.png](assets/images/readme/img_2.png)
 
-![img_3.png](img_3.png)
+![img_3.png](assets/images/readme/img_3.png)
 
-![img_4.png](img_4.png)
+![img_4.png](assets/images/readme/img_4.png)
 
-![img_5.png](img_5.png)
+![img_5.png](assets/images/readme/img_5.png)
 
-![img_6.png](img_6.png)
+![img_6.png](assets/images/readme/img_6.png)
 
-![img_7.png](img_7.png)
+![img_7.png](assets/images/readme/img_7.png)
