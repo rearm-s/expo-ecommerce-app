@@ -533,6 +533,20 @@
       "price": 16,
       "quantity": 1,
       "image": "https://i.imgur.com/LGk9Jn2.jpeg"
+    },
+    {
+      "id": 4,
+      "title": "Sleek Wireless Headphone & Inked Earbud Set",
+      "price": 44,
+      "quantity": 1,
+      "image": "https://i.imgur.com/LGk9Jn2.jpeg"
+    },
+    {
+      "id": 5,
+      "title": "Classic Comfort Drawstring Joggers",
+      "price": 79,
+      "quantity": 1,
+      "image": "https://i.imgur.com/LGk9Jn2.jpeg"
     }
   ],
   "notifications": [

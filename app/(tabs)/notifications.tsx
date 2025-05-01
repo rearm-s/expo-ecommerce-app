@@ -31,6 +31,7 @@ const NotificationsScreen = (props: Props) => {
       <View style={[styles.container, { marginTop: headerHeight }]}>
         <FlatList data={notifications}
           keyExtractor={(item) => item.id.toString()}
+          showsVerticalScrollIndicator={false}
           renderItem={({ item, index }) => (
             <Animated.View style={styles.notificationWrapper}
               entering={FadeInDown.delay(300 + index * 100).duration(500)}>
