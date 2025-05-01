@@ -559,6 +559,24 @@
       "title": "Order Cancelled",
       "message": "Your order has been successfully cancelled.",
       "timestamp": "5 days ago"
+    },
+    {
+      "id": 5,
+      "title": "New Sale",
+      "message": "Check out our latest sale on selected items.",
+      "timestamp": "1 week ago"
+    },
+    {
+      "id": 6,
+      "title": "New Arrivals",
+      "message": "Explore our new arrivals in the store.",
+      "timestamp": "2 weeks ago"
+    },
+    {
+      "id": 7,
+      "title": "Feedback Request",
+      "message": "We would love to hear your feedback on your recent purchase.",
+      "timestamp": "3 weeks ago"
     }
   ]
 }
